@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form - Sa Re Ga Ma Pa 2024</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/43/23/27/432327f68a83f9911cb25fea765e9252.jpg'); 
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0; 
+            height: 100vh; 
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px; 
+        }
+        h1 {
+            text-align: center;
+            color: darkslateblue;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            background-color: darkslateblue;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: slateblue;
+        }
+        .message-box {
+            display: none; 
+            position: fixed; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-size: 1.2em; /
+        }
+        .message-box img {
+            width: 80px;
+            height: 80px;
+            display: block;
+            margin: 0 auto 15px;
+        }
+    </style>
+    <script>
+        function showMessageBox(event) {
+            event.preventDefault();
+            const messageBox = document.getElementById('message-box');
+            messageBox.style.display = 'block';
+            setTimeout(function() {
+                messageBox.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sa Re Ga Ma Pa 2024</h1>
+        <form onsubmit="showMessageBox(event)">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="number-of-songs">Number of Songs</label>
+            <select id="number-of-songs" name="number-of-songs" required>
+                <option value="" disabled selected>Select the number of songs</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+            <label for="special-requirements">Special Requirements</label>
+            <textarea id="special-requirements" name="special-requirements" rows="4" placeholder="Any special requirements or notes?"></textarea>
+
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div id="message-box" class="message-box">
+        <img src="https://i.pinimg.com/originals/a8/df/28/a8df281d77a832fd148d4c9fd1f9fe79.gif" alt="Success">
+        <p>Registered successfully!</p>
+    </div>
+
+</body>
+</html>
